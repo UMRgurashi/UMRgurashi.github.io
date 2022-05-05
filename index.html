@@ -1,0 +1,174 @@
+<html>
+  <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <style type="text/css">
+          #network {
+            width:  100%;
+            height: 100%;
+          }
+     </style>
+  </head>
+
+  <body>
+    <div id="network"></div>
+    <script type="text/javascript">
+      var nodes = new vis.DataSet([
+        //1000-算数,2000-中学,3000-数1,4000-数A,5000-数2,,
+        {id: 8001, label: '微積・数Ⅲ',shape:'circle'},
+        {id: 6001, label: '数列',shape:'circle'},
+        {id: 5001, label: '微積・数Ⅱ',shape:'circle'},
+        {id: 4001, label: '確率・場合の数',shape:'circle'},
+        {id: 1001, label: 'さんすう',shape:'circle'},
+        {id: 67, label: '数値代入法で分母0になっていいんですか？',shape: 'image',image: 'img/数値代入法で分母0になっていいんですか？.png'},
+        {id: 66, label: '部分分数分解をする空手部',shape: 'image',image: 'img/部分分数分解をする空手部.png'},
+        {id: 65, label: '3次方程式を解こう(提案)(因数定理)',shape: 'image',image: 'img/3次方程式を解こう(提案)(因数定理).png'},
+        {id: 64, label: '式変形 ZONE',shape: 'image',image: 'img/【式変形チャンネル】式変形 ZONE【RED ZONE】.png'},
+        {id: 63, label: '二色蓮花蝶 + 月まで届け、不死の煙 + オーエン',shape: 'image',image: 'img/【東方ピアノ】二色蓮花蝶 + 月まで届け、不死の煙 + U.N.オーエンは彼女なのか？.jpg'},
+        {id: 62, label: '一橋の2022問題',shape: 'image',image: 'img/一橋の2022問題.png'},
+        {id: 61, label: '京大…素数…あっ(察し)',shape: 'image',image: 'img/京大…素数…あっ(察し).png'},
+        {id: 60, label: '阪大さん！？',shape: 'image',image: 'img/阪大さん！？.png'},
+        {id: 59, label: '(p^4+14は素数では)ないです',shape: 'image',image: 'img/(p^4+14は素数では)ないです.png'},
+        {id: 58, label: '4^n - 1 は3の倍数',shape: 'image',image: 'img/4^n - 1 は3の倍数.png'},
+        {id: 57, label: 'modとは',shape: 'image',image: 'img/modとは.png'},
+        {id: 56, label: '共通テスト・数学 VS 野獣先輩',shape: 'image',image: 'img/共通テスト・数学 VS 野獣先輩.png'},
+        {id: 53, label: '2022問題',shape: 'image',image: 'img/2022問題.png'},
+        {id: 52, label: 'logの小技',shape: 'image',image: 'img/logの小技.png'},
+        {id: 51, label: '3で割った余りを考える空手部',shape: 'image',image: 'img/3で割った余りを考える空手部.png'},
+        {id: 48, label: '因数分解をする先輩',shape: 'image',image: 'img/因数分解をする先輩.png'},
+        {id: 47, label: '階差数列ってなんやねん',shape: 'image',image: 'img/階差数列ってなんやねん.png'},
+        {id: 46, label: '特性方程式ってなんやねん',shape: 'image',image: 'img/特性方程式ってなんやねん.png'},
+        {id: 45, label: '曲線の長さの公式(3種類)を確認する空手部',shape: 'image',image: 'img/曲線の長さの公式(3種類)を確認する空手部.png'},
+        {id: 44, label: 'なんで定積分で面積が出るんですか？',shape: 'image',image: 'img/なんで定積分で面積が出るんですか？.jpg'},
+        {id: 42, label: '指数的増加を弾幕で表してみた',shape: 'image',image: 'img/指数的増加を弾幕で表してみた.jpg'},
+        {id: 41, label: '1=0.999999…を示す空手部',shape: 'image',image: 'img/1=0.999999…を示す空手部.jpg'},
+        {id: 40, label: 'トーナメント戦をする先輩',shape: 'image',image: 'img/トーナメント戦をする先輩.jpg'},
+        {id: 39, label: '二項分布の導入・期待値',shape: 'image',image: 'img/二項分布の導入・期待値.jpg'},
+        {id: 37, label: 'あっそっかぁ…(#2)',shape: 'image',image: 'img/あっそっかぁ2.jpg'},
+        {id: 36, label: '円の面積の公式(数Ⅱ編)',shape: 'image',image: 'img/円の面積の公式(数Ⅱ編()).jpg'},
+        {id: 35, label: '円の面積の公式(数Ⅲ編)',shape: 'image',image: 'img/円の面積の公式(数Ⅲ編).jpg'},
+        {id: 34, label: '円の面積の公式(さんすう編)',shape: 'image',image: 'img/円の面積の公式(さんすう編).jpg'},
+        {id: 33, label: '笹木咲と社築が解いていた問題を解説します',shape: 'image',image: 'img/笹木咲と社築が解いていた問題を解説します.jpg'},
+        {id: 32, label: 'Look-and-say sequence',shape: 'image',image: 'img/【OEIS解説】Look-and-say sequence【A005150】.jpg'},
+        {id: 31, label: '剰余の定理を証明する先輩',shape: 'image',image: 'img/剰余の定理を証明する先輩.png'},
+        {id: 29, label: '加法定理',shape: 'image',image: 'img/疲れからか、不幸にも加法定理を暗記してしまう.png'},
+        {id: 21, label: 'ポアソン分布を導出するきりたん',shape: 'image',image: 'img/ポアソン分布を導出するきりたん.png'},
+        {id: 18, label: '2021を素因数分解する先輩',shape: 'image',image: 'img/2021を素因数分解する先輩.png'},
+        {id: 17, label: '競技プログラミング',shape: 'image',image: 'img/まずうちさぁ、競技プログラミングしてるんだけど…書いてかない？(コード).png'},
+        {id: 16, label: 'あっそっかぁ…',shape: 'image',image: 'img/あっそっかぁ.png'},
+        {id: 15, label: '二項定理を解説するきりたん',shape: 'image',image: 'img/二項定理を解説するきりたん.png'},
+        {id: 14, label: '実際に微分してみる先輩',shape: 'image',image: 'img/実際に微分してみる先輩.png'},
+        {id: 13, label: '迫真数学部・高速展開の裏技',shape: 'image',image: 'img/迫真数学部・高速展開の裏技.png'},
+        {id: 12, label: '(tan1°は有理数じゃ) ないです (京都大学)',shape: 'image',image: 'img/(tan1°は有理数じゃ) ないです (京都大学).png'},
+        {id: 11, label: '区 分 求 積 ( に ん じ ん し り し り )',shape: 'image',image: 'img/区 分 求 積 ( に ん じ ん し り し り ).png'},
+        {id: 10, label: '正弦定理を証明するMUR大先輩',shape: 'image',image: 'img/正弦定理を証明するMUR大先輩.png'},
+        {id: 9,  label: '分数の割り算',shape: 'image',image: 'img/なんで分数の割り算はひっくり返す必要があるんですか？（正論）.png'},
+        {id: 8,  label: 'ひとくち将棋淫夢',shape: 'image',image: 'img/ひとくち将棋淫夢.jpg'},
+        {id: 7,  label: 'モーメント母関数',shape: 'image',image: 'img/モーメント母関数.png'},
+        {id: 4,  label: '微分の定義を暗記しようとする先輩',shape: 'image',image: 'img/微分の定義を暗記しようとする先輩.jpg'},
+        {id: 3,  label: '式を展開する先輩',shape: 'image',image: 'img/式を展開する先輩.png'}
+      ]);
+    
+      var edges = new vis.DataSet([
+        {from: 8001, to: 45, arrows: 'enabled'},
+        {from: 8001, to: 35, arrows: 'enabled'},
+        {from: 8001, to: 11, arrows: 'enabled'},
+        {from: 6001, to: 47, arrows: 'enabled'},
+        {from: 6001, to: 46, arrows: 'enabled'},
+        {from: 6001, to: 32, arrows: 'enabled'},
+        {from: 5001, to: 36, arrows: 'enabled'},
+        {from: 5001, to: 14, arrows: 'enabled'},
+        {from: 5001, to: 4, arrows: 'enabled'},
+        {from: 4001, to: 60, arrows: 'enabled'},
+        {from: 4001, to: 40, arrows: 'enabled'},
+        {from: 4001, to: 33, arrows: 'enabled'},
+        {from: 1001, to: 34, arrows: 'enabled'},
+        {from: 1001, to: 9, arrows: 'enabled'},
+        {from: 66, to: 67, arrows: 'to'},
+        {from: 65, to: 61, arrows: 'to'},
+        {from: 57, to: 62, arrows: 'to'},
+        {from: 57, to: 61, arrows: 'to'},
+        {from: 57, to: 59, arrows: 'to'},
+        {from: 57, to: 58, arrows: 'to'},
+        {from: 57, to: 53, arrows: 'to'},
+        {from: 57, to: 51, arrows: 'to'},
+        {from: 39, to: 21, arrows: 'to'},
+        {from: 36, to: 35, arrows: 'to'},
+        {from: 34, to: 36, arrows: 'to'},
+        {from: 31, to: 65, arrows: 'to'},
+        {from: 29, to: 12, arrows: 'to'},
+        {from: 15, to: 14, arrows: 'to'},
+        {from: 15, to: 39, arrows: 'to'},
+        {from: 15, to: 7, arrows: 'to'},
+        {from: 4, to: 44, arrows: 'to'},
+        {from: 4, to: 14, arrows: 'to'},
+        {from: 3, to: 13, arrows: 'to'},
+      ]);
+
+      var container = document.getElementById('network');
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+      var options = {
+        //physics: false
+      };
+
+      var network = new vis.Network(container, data, options);
+
+      network.on("click", function(params) {
+        if (params.nodes.length == 1) {
+          var nodeId = params.nodes[0];
+          var node = nodes.get(nodeId);
+          if(nodeId==67)window.open('https://youtu.be/24dFUtGLXW0','_blank');
+          if(nodeId==66)window.open('https://youtu.be/opyz7x-15lM','_blank');
+          if(nodeId==65)window.open('https://youtu.be/NZxhh3xtxbk','_blank');
+          if(nodeId==64)window.open('https://youtu.be/73L1_VqRxzg','_blank');
+          if(nodeId==63)window.open('https://youtu.be/jtuJJBW3bMA','_blank');
+          if(nodeId==62)window.open('https://youtu.be/MOFxyRa79lU','_blank');
+          if(nodeId==61)window.open('https://youtu.be/ohZSD2pmrXk','_blank');
+          if(nodeId==60)window.open('https://youtu.be/axU-JFcj_q8','_blank');
+          if(nodeId==59)window.open('https://youtu.be/PFhWqhEVfAI','_blank');
+          if(nodeId==58)window.open('https://youtu.be/x53989F_cqc','_blank');
+          if(nodeId==57)window.open('https://youtu.be/ZgDKQV71ydQ','_blank');
+          if(nodeId==56)window.open('https://youtu.be/UywBoeBsey8','_blank');
+          if(nodeId==53)window.open('https://youtu.be/rDBpjZZR_1k','_blank');
+          if(nodeId==52)window.open('https://youtu.be/DNzdsHongn4','_blank');
+          if(nodeId==51)window.open('https://youtu.be/fTDGhbAylYI','_blank');
+          if(nodeId==48)window.open('https://youtu.be/kpZ5dKjyxes','_blank');
+          if(nodeId==47)window.open('https://youtu.be/3IndOtP7q4A','_blank');
+          if(nodeId==46)window.open('https://youtu.be/Ko6LtKKXXXs','_blank');
+          if(nodeId==45)window.open('https://youtu.be/LxdF2wzfQBs','_blank');
+          if(nodeId==44)window.open('https://youtu.be/Wbgfnr8Pduw','_blank');
+          if(nodeId==42)window.open('https://youtu.be/YI-7iLfuxKs','_blank');
+          if(nodeId==41)window.open('https://youtu.be/w_MmivSldgY','_blank');
+          if(nodeId==40)window.open('https://youtu.be/Jxyu8Ejoxz8','_blank');
+          if(nodeId==39)window.open('https://youtu.be/npXRdmkCUwc','_blank');
+          if(nodeId==37)window.open('https://youtu.be/3UC9WoRVZRA','_blank');
+          if(nodeId==36)window.open('https://youtu.be/3UC9WoRVZRA','_blank');
+          if(nodeId==35)window.open('https://youtu.be/nu1Mamdbt0U','_blank');
+          if(nodeId==34)window.open('https://youtu.be/unmAawSymNE','_blank');
+          if(nodeId==33)window.open('https://youtu.be/vMjv4rxa1ZU','_blank');
+          if(nodeId==32)window.open('https://youtu.be/dVfzrlW0B5I','_blank');
+          if(nodeId==31)window.open('https://youtu.be/0nl6qtUsVjg','_blank');
+          if(nodeId==29)window.open('https://youtu.be/u1K77SQbfJM','_blank');
+          if(nodeId==21)window.open('https://youtu.be/k57Ulw55fA0','_blank');
+          if(nodeId==18)window.open('https://youtu.be/1Cagj6LJlCI','_blank');
+          if(nodeId==17)window.open('https://youtu.be/-WC461VSwgE','_blank');
+          if(nodeId==16)window.open('https://youtu.be/HqhsnRqZlE0','_blank');
+          if(nodeId==15)window.open('https://youtu.be/0a3ijornBFk','_blank');
+          if(nodeId==14)window.open('https://youtu.be/0VaWq7kDosM','_blank');
+          if(nodeId==13)window.open('https://youtu.be/UfXxRaA1akM','_blank');
+          if(nodeId==12)window.open('https://youtu.be/r8UlQZXStPc','_blank');
+          if(nodeId==11)window.open('https://youtu.be/Q7zINDBDn3s','_blank');
+          if(nodeId==10)window.open('https://youtu.be/SxxGi_ymOXI','_blank');
+          if(nodeId==9)window.open('https://youtu.be/qIwMsXDcxY4','_blank');
+          if(nodeId==8)window.open('https://youtu.be/9IM7wLkxLGo','_blank');
+          if(nodeId==7)window.open('https://youtu.be/DLPSHktf98U','_blank');
+          if(nodeId==4)window.open('https://www.youtube.com/watch?v=_vX4RSrCUo4','_blank');
+          if(nodeId==3)window.open('https://youtu.be/GrcdxRcIkI4','_blank');
+        }
+      });
+    </script>
+  </body>
+</html>
