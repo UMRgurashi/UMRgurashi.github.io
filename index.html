@@ -22,6 +22,7 @@
         {id: 5001, label: '微積・数Ⅱ',shape:'circle'},
         {id: 4001, label: '確率・場合の数',shape:'circle'},
         {id: 1001, label: 'さんすう',shape:'circle'},
+        {id: 68, label: 'サイト作りました',shape: 'image',image: 'img/サイト作りました.png'},
         {id: 67, label: '数値代入法で分母0になっていいんですか？',shape: 'image',image: 'img/数値代入法で分母0になっていいんですか？.png'},
         {id: 66, label: '部分分数分解をする空手部',shape: 'image',image: 'img/部分分数分解をする空手部.png'},
         {id: 65, label: '3次方程式を解こう(提案)(因数定理)',shape: 'image',image: 'img/3次方程式を解こう(提案)(因数定理).png'},
@@ -53,6 +54,7 @@
         {id: 33, label: '笹木咲と社築が解いていた問題を解説します',shape: 'image',image: 'img/笹木咲と社築が解いていた問題を解説します.jpg'},
         {id: 32, label: 'Look-and-say sequence',shape: 'image',image: 'img/【OEIS解説】Look-and-say sequence【A005150】.jpg'},
         {id: 31, label: '剰余の定理を証明する先輩',shape: 'image',image: 'img/剰余の定理を証明する先輩.png'},
+        {id: 30, label: '練習用2(僕の戦争)',shape: 'image',image: 'img/練習用2(僕の戦争).jpg'},
         {id: 29, label: '加法定理',shape: 'image',image: 'img/疲れからか、不幸にも加法定理を暗記してしまう.png'},
         {id: 21, label: 'ポアソン分布を導出するきりたん',shape: 'image',image: 'img/ポアソン分布を導出するきりたん.png'},
         {id: 18, label: '2021を素因数分解する先輩',shape: 'image',image: 'img/2021を素因数分解する先輩.png'},
@@ -109,6 +111,7 @@
         {from: 36, to: 35, arrows: 'to'},
         {from: 34, to: 36, arrows: 'to'},
         {from: 31, to: 65, arrows: 'to'},
+        {from: 30, to: 64, arrows: 'enabled'},
         {from: 29, to: 12, arrows: 'to'},
         {from: 18, to: 48, arrows: 'to'},
         {from: 17, to: 53, arrows: 'enabled'},
@@ -136,6 +139,7 @@
         if (params.nodes.length == 1) {
           var nodeId = params.nodes[0];
           var node = nodes.get(nodeId);
+          if(nodeId==68)window.open('https://youtu.be/Xua8dzlT8aU','_blank');
           if(nodeId==67)window.open('https://youtu.be/24dFUtGLXW0','_blank');
           if(nodeId==66)window.open('https://youtu.be/opyz7x-15lM','_blank');
           if(nodeId==65)window.open('https://youtu.be/NZxhh3xtxbk','_blank');
@@ -167,6 +171,7 @@
           if(nodeId==33)window.open('https://youtu.be/vMjv4rxa1ZU','_blank');
           if(nodeId==32)window.open('https://youtu.be/dVfzrlW0B5I','_blank');
           if(nodeId==31)window.open('https://youtu.be/0nl6qtUsVjg','_blank');
+          if(nodeId==30)window.open('https://youtu.be/Ou2lc6HlBk8','_blank');
           if(nodeId==29)window.open('https://youtu.be/u1K77SQbfJM','_blank');
           if(nodeId==21)window.open('https://youtu.be/k57Ulw55fA0','_blank');
           if(nodeId==18)window.open('https://youtu.be/1Cagj6LJlCI','_blank');
