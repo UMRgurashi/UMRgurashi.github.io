@@ -15,6 +15,7 @@
     <script type="text/javascript">
       var nodes = new vis.DataSet([
         //1000-算数,2000-中学,3000-数1,4000-数A,5000-数2,,
+        {id: 9000, label: '京大',shape:'circle'},
         {id: 8001, label: '微積・数Ⅲ',shape:'circle'},
         {id: 6001, label: '数列',shape:'circle'},
         {id: 5001, label: '微積・数Ⅱ',shape:'circle'},
@@ -70,6 +71,9 @@
       ]);
     
       var edges = new vis.DataSet([
+        {from: 9000, to: 61, arrows: 'enabled'},
+        {from: 9000, to: 59, arrows: 'enabled'},
+        {from: 9000, to: 12, arrows: 'enabled'},
         {from: 8001, to: 45, arrows: 'enabled'},
         {from: 8001, to: 35, arrows: 'enabled'},
         {from: 8001, to: 11, arrows: 'enabled'},
@@ -82,6 +86,7 @@
         {from: 4001, to: 60, arrows: 'enabled'},
         {from: 4001, to: 40, arrows: 'enabled'},
         {from: 4001, to: 33, arrows: 'enabled'},
+        {from: 4001, to: 15, arrows: 'enabled'},
         {from: 1001, to: 34, arrows: 'enabled'},
         {from: 1001, to: 9, arrows: 'enabled'},
         {from: 66, to: 67, arrows: 'to'},
@@ -97,6 +102,9 @@
         {from: 34, to: 36, arrows: 'to'},
         {from: 31, to: 65, arrows: 'to'},
         {from: 29, to: 12, arrows: 'to'},
+        {from: 18, to: 48, arrows: 'to'},
+        {from: 17, to: 53, arrows: 'enabled'},
+        {from: 16, to: 37, arrows: 'enabled'},
         {from: 15, to: 14, arrows: 'to'},
         {from: 15, to: 39, arrows: 'to'},
         {from: 15, to: 7, arrows: 'to'},
@@ -144,7 +152,7 @@
           if(nodeId==41)window.open('https://youtu.be/w_MmivSldgY','_blank');
           if(nodeId==40)window.open('https://youtu.be/Jxyu8Ejoxz8','_blank');
           if(nodeId==39)window.open('https://youtu.be/npXRdmkCUwc','_blank');
-          if(nodeId==37)window.open('https://youtu.be/3UC9WoRVZRA','_blank');
+          if(nodeId==37)window.open('https://youtu.be/HwXuBV-AAYM','_blank');
           if(nodeId==36)window.open('https://youtu.be/3UC9WoRVZRA','_blank');
           if(nodeId==35)window.open('https://youtu.be/nu1Mamdbt0U','_blank');
           if(nodeId==34)window.open('https://youtu.be/unmAawSymNE','_blank');
