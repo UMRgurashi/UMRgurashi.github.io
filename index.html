@@ -25,6 +25,7 @@
         {id: 4001, label: '確率・場合の数',shape:'circle'},
         {id: 3001, label: '三角比',shape:'circle'},
         {id: 1001, label: 'さんすう',shape:'circle'},
+        {id: 70, label: 'えっ90°より大きいんですけどそれは…',shape: 'image',image: 'img/えっ90°より大きいんですけどそれは….png'},
         {id: 69, label: 'サイン・コサイン・タンジェントって何ですか？',shape: 'image',image: 'img/サイン・コサイン・タンジェントって何ですか？.png'},
         {id: 68, label: 'サイト作りました',shape: 'image',image: 'img/サイト作りました.png'},
         {id: 67, label: '数値代入法で分母0になっていいんですか？',shape: 'image',image: 'img/数値代入法で分母0になっていいんですか？.png'},
@@ -100,6 +101,7 @@
         {from: 5004, to: 4, arrows: 'enabled'},
         {from: 5003, to: 52, arrows: 'enabled'},
         {from: 5003, to: 42, arrows: 'enabled'},
+        {from: 5002, to: 35, arrows: 'enabled'},
         {from: 5002, to: 29, arrows: 'enabled'},
         {from: 4001, to: 60, arrows: 'enabled'},
         {from: 4001, to: 40, arrows: 'enabled'},
@@ -110,6 +112,7 @@
         {from: 3001, to: 10, arrows: 'enabled'},
         {from: 1001, to: 34, arrows: 'enabled'},
         {from: 1001, to: 9, arrows: 'enabled'},
+        {from: 69, to: 70, arrows: 'to'},
         {from: 66, to: 67, arrows: 'to'},
         {from: 65, to: 61, arrows: 'to'},
         {from: 57, to: 62, arrows: 'to'},
@@ -151,6 +154,7 @@
         if (params.nodes.length == 1) {
           var nodeId = params.nodes[0];
           var node = nodes.get(nodeId);
+          if(nodeId==70)window.open('https://youtu.be/QkARMfsO2zw','_blank');
           if(nodeId==69)window.open('https://youtu.be/DjNej56T9Hc','_blank');
           if(nodeId==68)window.open('https://youtu.be/Xua8dzlT8aU','_blank');
           if(nodeId==67)window.open('https://youtu.be/24dFUtGLXW0','_blank');
