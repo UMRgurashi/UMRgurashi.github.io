@@ -16,15 +16,21 @@
       var nodes = new vis.DataSet([
         //1000-算数,2000-中学,3000-数1,4000-数A,5000-数2,,
         {id: 10001, label: 'ピアノ',shape:'circle'},
+        {id: 10002, label: 'shorts',shape:'circle'},
         {id: 9000, label: '京大',shape:'circle'},
-        {id: 8001, label: '微積・数Ⅲ',shape:'circle'},
+        {id: 7001, label: '微積・数Ⅲ',shape:'circle'},
         {id: 6001, label: '数列',shape:'circle'},
         {id: 5004, label: '微積・数Ⅱ',shape:'circle'},
         {id: 5003, label: '指数・対数',shape:'circle'},
         {id: 5002, label: '三角関数',shape:'circle'},
         {id: 4001, label: '確率・場合の数',shape:'circle'},
         {id: 3001, label: '三角比',shape:'circle'},
+        {id: 2001, label: '中学数学',shape:'circle'},
         {id: 1001, label: 'さんすう',shape:'circle'},
+        {id: 74, label: '高さを求める先輩２',shape: 'image',image: 'img/高さを求める先輩２.png'},
+        {id: 73, label: 'にじさんじの相関図を完全に作ってみた',shape: 'image',image: 'img/にじさんじの相関図を完全に作ってみた.png'},
+        {id: 72, label: 'ﾄﾞｩﾜｧ! Π[k=1,4](k^2+1) !! ',shape: 'image',image: 'img/ﾄﾞｩﾜｧ! Π[k=1,4](k^2+1) !! .png'},
+        {id: 71, label: '高さを求める先輩',shape: 'image',image: 'img/高さを求める先輩.png'},
         {id: 70, label: 'えっ90°より大きいんですけどそれは…',shape: 'image',image: 'img/えっ90°より大きいんですけどそれは….png'},
         {id: 69, label: 'サイン・コサイン・タンジェントって何ですか？',shape: 'image',image: 'img/サイン・コサイン・タンジェントって何ですか？.png'},
         {id: 68, label: 'サイト作りました',shape: 'image',image: 'img/サイト作りました.png'},
@@ -82,15 +88,18 @@
       ]);
     
       var edges = new vis.DataSet([
+        {from: 10002, to: 73, arrows: 'enabled'},
+        {from: 10002, to: 72, arrows: 'enabled'},
+        {from: 10002, to: 8, arrows: 'enabled'},
         {from: 10001, to: 63, arrows: 'enabled'},
         {from: 10001, to: 2, arrows: 'enabled'},
         {from: 10001, to: 1, arrows: 'enabled'},
         {from: 9000, to: 61, arrows: 'enabled'},
         {from: 9000, to: 59, arrows: 'enabled'},
         {from: 9000, to: 12, arrows: 'enabled'},
-        {from: 8001, to: 45, arrows: 'enabled'},
-        {from: 8001, to: 35, arrows: 'enabled'},
-        {from: 8001, to: 11, arrows: 'enabled'},
+        {from: 7001, to: 45, arrows: 'enabled'},
+        {from: 7001, to: 35, arrows: 'enabled'},
+        {from: 7001, to: 11, arrows: 'enabled'},
         {from: 6001, to: 47, arrows: 'enabled'},
         {from: 6001, to: 46, arrows: 'enabled'},
         {from: 6001, to: 32, arrows: 'enabled'},
@@ -110,8 +119,16 @@
         {from: 3001, to: 5002, arrows: 'enabled'},
         {from: 3001, to: 69, arrows: 'enabled'},
         {from: 3001, to: 10, arrows: 'enabled'},
+        {from: 2001, to: 74, arrows: 'enabled'},
+        {from: 2001, to: 71, arrows: 'enabled'},
+        {from: 2001, to: 51, arrows: 'enabled'},
+        {from: 2001, to: 41, arrows: 'enabled'},
+        {from: 2001, to: 37, arrows: 'enabled'},
+        {from: 2001, to: 18, arrows: 'enabled'},
+        {from: 2001, to: 3, arrows: 'enabled'},
         {from: 1001, to: 34, arrows: 'enabled'},
         {from: 1001, to: 9, arrows: 'enabled'},
+        {from: 71, to: 74, arrows: 'to'},
         {from: 69, to: 70, arrows: 'to'},
         {from: 66, to: 67, arrows: 'to'},
         {from: 65, to: 61, arrows: 'to'},
@@ -124,6 +141,7 @@
         {from: 39, to: 21, arrows: 'to'},
         {from: 36, to: 35, arrows: 'to'},
         {from: 34, to: 36, arrows: 'to'},
+        {from: 33, to: 73, arrows: 'enabled'},
         {from: 31, to: 65, arrows: 'to'},
         {from: 30, to: 64, arrows: 'enabled'},
         {from: 29, to: 12, arrows: 'to'},
@@ -154,6 +172,10 @@
         if (params.nodes.length == 1) {
           var nodeId = params.nodes[0];
           var node = nodes.get(nodeId);
+          if(nodeId==74)window.open('https://youtu.be/a5kNO0JQufo','_blank');
+          if(nodeId==73)window.open('https://youtube.com/shorts/9iMgbUDutkI','_blank');
+          if(nodeId==72)window.open('https://youtube.com/shorts/2DXMwsuajMI','_blank');
+          if(nodeId==71)window.open('https://youtu.be/XNjCP3i9V3g','_blank');
           if(nodeId==70)window.open('https://youtu.be/QkARMfsO2zw','_blank');
           if(nodeId==69)window.open('https://youtu.be/DjNej56T9Hc','_blank');
           if(nodeId==68)window.open('https://youtu.be/Xua8dzlT8aU','_blank');
