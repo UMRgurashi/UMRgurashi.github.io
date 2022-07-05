@@ -19,6 +19,7 @@
         {id: 10002, label: 'shorts',shape:'circle'},
         {id: 9000, label: '京大',shape:'circle'},
         {id: 7001, label: '微積・数Ⅲ',shape:'circle'},
+        {id: 6004, label: '確立漸化式',shape:'circle'},
         {id: 6001, label: '数列',shape:'circle'},
         {id: 5004, label: '微積・数Ⅱ',shape:'circle'},
         {id: 5003, label: '指数・対数',shape:'circle'},
@@ -27,6 +28,8 @@
         {id: 3001, label: '三角比',shape:'circle'},
         {id: 2001, label: '中学数学',shape:'circle'},
         {id: 1001, label: 'さんすう',shape:'circle'},
+        {id: 77, label: '確立漸化式の基本問題',shape: 'image',image: 'img/確立漸化式の基本問題.png'},
+        {id: 76, label: '古めの東工大にんじんしりしり',shape: 'image',image: 'img/古めの東工大にんじんしりしり.png'},
         {id: 75, label: '福島大学の小問',shape: 'image',image: 'img/福島大学の小問.png'},
         {id: 74, label: '高さを求める先輩２',shape: 'image',image: 'img/高さを求める先輩２.png'},
         {id: 73, label: 'にじさんじの相関図を完全に作ってみた',shape: 'image',image: 'img/にじさんじの相関図を完全に作ってみた.png'},
@@ -101,6 +104,8 @@
         {from: 7001, to: 45, arrows: 'enabled'},
         {from: 7001, to: 35, arrows: 'enabled'},
         {from: 7001, to: 11, arrows: 'enabled'},
+        {from: 6004, to: 77, arrows: 'enabled'},
+        {from: 6001, to: 6004, arrows: 'to'},
         {from: 6001, to: 47, arrows: 'enabled'},
         {from: 6001, to: 46, arrows: 'enabled'},
         {from: 6001, to: 32, arrows: 'enabled'},
@@ -113,6 +118,7 @@
         {from: 5003, to: 42, arrows: 'enabled'},
         {from: 5002, to: 35, arrows: 'enabled'},
         {from: 5002, to: 29, arrows: 'enabled'},
+        {from: 4001, to: 6004, arrows: 'to'},
         {from: 4001, to: 60, arrows: 'enabled'},
         {from: 4001, to: 40, arrows: 'enabled'},
         {from: 4001, to: 33, arrows: 'enabled'},
@@ -141,6 +147,7 @@
         {from: 57, to: 53, arrows: 'to'},
         {from: 57, to: 51, arrows: 'to'},
         {from: 52, to: 75, arrows: 'to'},
+        {from: 46, to: 77, arrows: 'to'},
         {from: 39, to: 21, arrows: 'to'},
         {from: 36, to: 35, arrows: 'to'},
         {from: 34, to: 36, arrows: 'to'},
@@ -156,6 +163,7 @@
         {from: 15, to: 14, arrows: 'to'},
         {from: 15, to: 39, arrows: 'to'},
         {from: 15, to: 7, arrows: 'to'},
+        {from: 11, to: 76, arrows: 'to'},
         {from: 4, to: 44, arrows: 'to'},
         {from: 4, to: 14, arrows: 'to'},
         {from: 3, to: 13, arrows: 'to'},
@@ -176,6 +184,8 @@
         if (params.nodes.length == 1) {
           var nodeId = params.nodes[0];
           var node = nodes.get(nodeId);
+          if(nodeId==77)window.open('https://youtu.be/f45pGm3HDhM','_blank');
+          if(nodeId==76)window.open('https://youtu.be/MNfO8hbB264','_blank');
           if(nodeId==75)window.open('https://youtu.be/ELX6ldLQ9I8','_blank');
           if(nodeId==74)window.open('https://youtu.be/a5kNO0JQufo','_blank');
           if(nodeId==73)window.open('https://youtube.com/shorts/9iMgbUDutkI','_blank');
