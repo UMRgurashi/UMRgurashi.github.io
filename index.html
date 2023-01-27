@@ -18,6 +18,7 @@
         {id: 10001, label: 'ピアノ',shape:'circle'},
         {id: 10002, label: 'shorts',shape:'circle'},
         {id: 9000, label: '京大',shape:'circle'},
+        {id: 9001, label: 'センター・共テ',shape:'circle'},
         {id: 7001, label: '微積・数Ⅲ',shape:'circle'},
         {id: 6004, label: '確立漸化式',shape:'circle'},
         {id: 6001, label: '数列',shape:'circle'},
@@ -28,6 +29,14 @@
         {id: 3001, label: '三角比',shape:'circle'},
         {id: 2001, label: '中学数学',shape:'circle'},
         {id: 1001, label: 'さんすう',shape:'circle'},
+        {id: 85, label: 'プレゼント交換は何通り？',shape: 'image',image: 'img/プレゼント交換は何通り？.png'},
+        {id: 84, label: 'マーク式用の小技',shape: 'image',image: 'img/マーク式用の小技.png'},
+        {id: 83, label: '共通テスト・情報',shape: 'image',image: 'img/【情報淫夢】共通テスト・情報.png'},
+        {id: 82, label: '共通テスト・数学の評判',shape: 'image',image: 'img/共通テスト・数学の評判.png'},
+        {id: 81, label: '左下から右上まで何通り？【カタラン数】',shape: 'image',image: 'img/【数学淫夢】左下から右上まで何通り？【カタラン数】.png'},
+        {id: 80, label: '共分散・相関係数とは？',shape: 'image',image: 'img/共分散・相関係数とは？.png'},
+        {id: 79, label: '分散・標準偏差とは？',shape: 'image',image: 'img/分散・標準偏差とは？.png'},
+        {id: 78, label: '【数学淫夢】なんで平行移動するとマイナスになるんですか？',shape: 'image',image: 'img/【数学淫夢】なんで平行移動するとマイナスになるんですか？.png'},
         {id: 77, label: '確立漸化式の基本問題',shape: 'image',image: 'img/確立漸化式の基本問題.png'},
         {id: 76, label: '古めの東工大にんじんしりしり',shape: 'image',image: 'img/古めの東工大にんじんしりしり.png'},
         {id: 75, label: '福島大学の小問',shape: 'image',image: 'img/福島大学の小問.png'},
@@ -98,6 +107,11 @@
         {from: 10001, to: 63, arrows: 'enabled'},
         {from: 10001, to: 2, arrows: 'enabled'},
         {from: 10001, to: 1, arrows: 'enabled'},
+        {from: 9001, to: 84, arrows: 'enabled'},
+        {from: 9001, to: 83, arrows: 'enabled'},
+        {from: 9001, to: 82, arrows: 'enabled'},
+        {from: 9001, to: 56, arrows: 'enabled'},
+        {from: 9001, to: 4, arrows: 'enabled'},
         {from: 9000, to: 61, arrows: 'enabled'},
         {from: 9000, to: 59, arrows: 'enabled'},
         {from: 9000, to: 12, arrows: 'enabled'},
@@ -119,6 +133,8 @@
         {from: 5002, to: 35, arrows: 'enabled'},
         {from: 5002, to: 29, arrows: 'enabled'},
         {from: 4001, to: 6004, arrows: 'to'},
+        {from: 4001, to: 85, arrows: 'enabled'},
+        {from: 4001, to: 81, arrows: 'enabled'},
         {from: 4001, to: 60, arrows: 'enabled'},
         {from: 4001, to: 40, arrows: 'enabled'},
         {from: 4001, to: 33, arrows: 'enabled'},
@@ -146,6 +162,7 @@
         {from: 57, to: 58, arrows: 'to'},
         {from: 57, to: 53, arrows: 'to'},
         {from: 57, to: 51, arrows: 'to'},
+        {from: 56, to: 85, arrows: 'to'},
         {from: 52, to: 75, arrows: 'to'},
         {from: 46, to: 77, arrows: 'to'},
         {from: 39, to: 21, arrows: 'to'},
@@ -184,6 +201,14 @@
         if (params.nodes.length == 1) {
           var nodeId = params.nodes[0];
           var node = nodes.get(nodeId);
+          if(nodeId==85)window.open('','_blank');
+          if(nodeId==84)window.open('https://youtu.be/QuvJE8PkrjE','_blank');
+          if(nodeId==83)window.open('https://youtu.be/6V2ilx10knc','_blank');
+          if(nodeId==82)window.open('https://youtu.be/2UDyr1uny8Y','_blank');
+          if(nodeId==81)window.open('https://youtu.be/DKy4UhUZA3U','_blank');
+          if(nodeId==80)window.open('https://youtu.be/wdyWyw2vRks','_blank');
+          if(nodeId==79)window.open('https://youtu.be/o6sSpF6ECBs','_blank');
+          if(nodeId==78)window.open('https://youtu.be/jw_Tt3m-J-k','_blank');
           if(nodeId==77)window.open('https://youtu.be/f45pGm3HDhM','_blank');
           if(nodeId==76)window.open('https://youtu.be/MNfO8hbB264','_blank');
           if(nodeId==75)window.open('https://youtu.be/ELX6ldLQ9I8','_blank');
